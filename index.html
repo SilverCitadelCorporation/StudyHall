@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electoral College Study Guide</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: #e0e0e0; text-align: center; margin: 0; padding: 20px; }
+        h1 { color: #ffffff; font-size: 1.5rem; }
+        p { color: #bbbbbb; }
+        
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            gap: 15px; 
+            max-width: 800px; 
+            margin: 20px auto; 
+        }
+
+        /* Thumbnail Styles */
+        .thumb-link { display: block; text-decoration: none; }
+        .thumb { 
+            width: 100%; 
+            border-radius: 10px; 
+            border: 2px solid #333; 
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .thumb:active { transform: scale(0.95); border-color: #007bff; }
+
+        /* Fullscreen Pop-up (Modal) */
+        .modal {
+            display: none; 
+            position: fixed; z-index: 100; left: 0; top: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.95);
+            justify-content: center; align-items: center;
+        }
+        .modal img { max-width: 95%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .modal:target { display: flex; } 
+        .close { position: absolute; top: 10px; right: 20px; font-size: 40px; color: white; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Electoral College Guide</h1>
+    <p>Tap an image to enlarge</p>
+
+    <div class="gallery">
+        <a href="#p1" class="thumb-link"><img src="1000002941.png" class="thumb"></a>
+        <a href="#p2" class="thumb-link"><img src="1000002942.png" class="thumb"></a>
+        <a href="#p3" class="thumb-link"><img src="1000002943.png" class="thumb"></a>
+        <a href="#p4" class="thumb-link"><img src="1000002944.png" class="thumb"></a>
+    </div>
+
+    <div id="p1" class="modal"><a href="#" class="close">&times;</a><img src="1000002941.png"></div>
+    <div id="p2" class="modal"><a href="#" class="close">&times;</a><img src="1000002942.png"></div>
+    <div id="p3" class="modal"><a href="#" class="close">&times;</a><img src="1000002943.png"></div>
+    <div id="p4" class="modal"><a href="#" class="close">&times;</a><img src="1000002944.png"></div>
+
+</body>
+</html>
